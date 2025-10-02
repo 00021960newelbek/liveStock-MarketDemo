@@ -1,4 +1,4 @@
-#Animal Counting and Classification System
+Animal Counting and Classification System
 Project Overview
 This repository showcases a computer vision system for detecting, tracking, and classifying animals (e.g., cows, sheep, goats, horses) in video footage, designed as a demo for a portfolio to reflect enterprise-level work. The system, named "Mol-Bozor" (Uzbek for "cattle market"), processes videos to count animals crossing a virtual line, classify them as adult or young based on size statistics, and evaluate model performance. It is a simplified version of larger-scale projects, focusing on core functionality without cloud integrations or real-time streaming.
 The project leverages YOLOv11 for object detection, combined with custom logic for tracking, statistical analysis, and dataset preparation. It was developed to demonstrate expertise in computer vision, object tracking, and model evaluation for agricultural applications, such as livestock monitoring.
@@ -13,7 +13,7 @@ PyTorch: Backend for YOLO models, enabling GPU-accelerated inference and trainin
 Roboflow: For dataset management and download, streamlining labeled data acquisition.
 Pathlib: For cross-platform file path handling.
 
-#Why These Technologies?
+why These Technologies?
 
 YOLOv11: Chosen for its balance of speed and accuracy, suitable for real-time applications. The nano version (yolo11n.pt) ensures efficiency on resource-constrained devices, while custom fine-tuning adapts it to specific animal classes.
 ByteTrack: Selected for robust multi-object tracking, critical for tracking animals across frames and detecting line crossings without losing identity.
@@ -22,7 +22,7 @@ Statistical Libraries (NumPy, Pandas, etc.): Essential for size-based classifica
 Roboflow: Simplifies dataset acquisition and versioning, crucial for managing large-scale labeled datasets (4000+ images in the enterprise version).
 PyTorch: Provides a flexible deep learning framework, supporting YOLO's training and inference needs, with CUDA for GPU acceleration.
 
-#How It Works
+How It Works
 The system comprises four main scripts, each addressing a specific aspect of the pipeline:
 
 Dataset Download (downloadDataset.py):
@@ -61,19 +61,19 @@ How: Evaluates models on a test dataset, calculates metrics, and generates visua
 
 
 
-#Project Design
+Project Design
 
 Modularity: Each script handles a distinct task (data prep, training, inference, evaluation), mirroring microservices in enterprise systems.
 Scalability: Designed to handle large datasets (4000+ images in the full version) and multiple models, though the demo uses a smaller subset.
 Extensibility: Easily adaptable to new animal classes or detection tasks by updating the dataset and retraining.
 Robustness: Includes error handling for file paths, model loading, and video processing, ensuring reliability.
 
-#Limitations and Notes
+Limitations and Notes
 
 Large datasets and trained models/videos are not committed due to GitHub size limits. They can be recreated using downloadDataset.py and train.py.
 Paths in scripts are hardcoded (e.g., C:\Users\elbek\...) for demo purposes; production versions use environment variables or config files.
 The demo focuses on offline video processing; enterprise versions included real-time streaming and cloud integration.
-
+sad
 
 
 Built with Ultralytics YOLO and Roboflow.
